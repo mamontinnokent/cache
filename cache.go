@@ -4,7 +4,7 @@ type Cache struct {
 	cache map[string]interface{}
 }
 
-func (c Cache) New() Cache {
+func New() Cache {
 	return Cache{
 		cache: make(map[string]interface{}),
 	}
