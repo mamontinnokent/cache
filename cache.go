@@ -1,0 +1,19 @@
+package cache
+
+type Cache struct {
+	cache map[string]interface{}
+}
+
+func (c Cache) New() Cache {
+	return Cache{
+		cache: make(map[string]interface{}),
+	}
+}
+
+func (c Cache) Get(key string) interface{} {
+	return c.cache[key]
+}
+
+func (c *Cache) Set(key string, value interface{}) {
+	c.cache[key] = value
+}
